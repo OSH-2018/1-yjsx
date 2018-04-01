@@ -73,10 +73,12 @@
 #### 3.追踪内核启动步骤
 在查阅资料的时候，碰巧看到了这张描述了内核初始化的过程图
 ![kernel_init.png](http://images.51cto.com/files/uploadimg/20100723/103833643.jpg)
+
 我便以这个为基础，分析一下linux内核初始化的过程。
 
 1. 此时内核处于start_kernel处
 ![start_kernel.png](https://github.com/OSH-2018/1-yjsx/blob/master/hw01/pic/start_kernel.png?raw=true)
+
 通过查看源码，凭直觉选择了几个看起来重要的函数，一一查阅其功能得到下表
 
 |函数名称    |功能        |
@@ -122,5 +124,5 @@
 ![time.png](https://github.com/OSH-2018/1-yjsx/blob/master/hw01/pic/time.png?raw=true)
 
 
-##结语
+## 结语
 通过本次实验，我大概熟悉了linux下的一些命令，也大概知道了系统内核在启动时的一些关键步骤，通过阅览源代码，我不由得感触到了计算机科学的博大精深，也认识到了要想完成一个成型的大型代码是多么的不容易，最后希望自己以后的实验不要赶ddl。

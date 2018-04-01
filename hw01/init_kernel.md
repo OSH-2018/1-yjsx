@@ -34,9 +34,12 @@
 ### 3.实验过程
 #### 1. 使用qemu加载内核
 
+    ```shell
     qemu-system-x86_64 \
     -kernel /linux-4.15.14/arch/x86/boot/bzImage \ #选择编译好的内核
     -initrd \home\dyf0202\init_kernel/roptfs.img \ #选择制作好的根文件系统
-    -s \
-    -S \
-    -append nokaslr
+    -s \ #启动gdbserver，效果等同于-gdb tcp::1234
+    -S \ #启动内核时停止，等待调试器命令
+    -append nokaslr \ #使得gdb可以加断点
+    ```
+    
